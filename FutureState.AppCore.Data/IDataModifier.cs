@@ -4,7 +4,7 @@ using System.Linq.Expressions;
 
 namespace FutureState.AppCore.Data
 {
-    public interface IDbChange
+    public interface IDataModifier
     {
         void Create<TModel>(TModel model) where TModel : class, new();
         void Create<TModel>(TModel model, IDbMapper<TModel> dbMapper) where TModel : class, new();
